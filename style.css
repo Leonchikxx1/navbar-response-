@@ -1,0 +1,78 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: black;
+	color: #fff;
+}
+.title{
+	font-size: 35px;
+	margin: 20px;
+}
+.links ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+.links li{
+	list-style: none;
+}
+.links li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 20px;
+	display: block;
+	font-size: 25px;
+}
+.links li:hover{
+   background-color: crimson;
+}
+.button{
+	position: absolute;
+	top: 12px;
+	right: 16px;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 21px;
+}
+.button .bar{
+	height: 3px;
+	width: 100%;
+	background-color:#fff;
+	border-radius:10px;
+}
+@media(max-width: 400px){
+	.button{
+		display: flex;
+	}
+	.links{
+		display: none;
+		width: 100%;/*анимация на всю строку*/
+	}
+	.navbar{
+		flex-direction: column;/*список сдвигается вниз*/
+		align-items: flex-start;/*выравнивает по левому краю заголовок*/
+	}
+	.links ul{
+		width: 100%;
+		flex-direction: column;/*список сдвигается,каждое слово на новой строчке */
+   }
+   .links li{
+   	text-align: center;/*наш список выравнивается по центру*/
+   }
+   .links li a{
+   	padding: 8px 16px;
+   }
+   .links.active{
+   	display: flex;
+   }
+}
